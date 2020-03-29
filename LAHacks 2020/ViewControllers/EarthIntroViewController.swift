@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class EarthIntroViewController: UIViewController {
 
+    @IBOutlet weak var earthyImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+            let gif = try UIImage(gifName: "earthy")
+            earthyImageView.setGifImage(gif)
+        } catch {
+            print(error)
+        }
         
         // Initialize gradient layer.
         let gradientLayer: CAGradientLayer = CAGradientLayer()

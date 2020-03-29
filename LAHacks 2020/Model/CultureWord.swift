@@ -17,4 +17,9 @@ class CultureWord: NSObject {
         self.definition = definition
         self.word = word
     }
+    
+    init(word: String, definition: String) {
+        self.definition = definition
+        self.word = word
+    }
 }

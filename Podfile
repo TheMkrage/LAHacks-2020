@@ -7,7 +7,10 @@ target 'LAHacks 2020' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-  pod 'SwiftGoogleTranslate'
+  pod "ROGoogleTranslate"
+  pod 'SwiftyGif'
+  pod 'Presentr'
+  pod 'GhostTypewriter'
   # Pods for LAHacks 2020
 
 end

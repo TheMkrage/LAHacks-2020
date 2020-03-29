@@ -8,15 +8,11 @@
 
 import UIKit
 
-enum Language: String {
-    case english, spanish
-}
-
 class CultureTip: NSObject {
     var tip: String
-    var language: Language
+    var language: Languages
     
-    init(language: Language, tip: String) {
+    init(language: Languages, tip: String) {
         self.language = language
         self.tip = tip
     }
