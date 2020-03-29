@@ -13,6 +13,20 @@
 		7E26A65C242D733A009506AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E26A65A242D733A009506AA /* Main.storyboard */; };
 		7E26A65E242D7341009506AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E26A65D242D7341009506AA /* Assets.xcassets */; };
 		7E26A661242D7341009506AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E26A65F242D7341009506AA /* LaunchScreen.storyboard */; };
+		7E3B4D84242F22F00013F98B /* EarthIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D83242F22F00013F98B /* EarthIntroViewController.swift */; };
+		7E3B4D86242F23510013F98B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D85242F23510013F98B /* UIColor+Extension.swift */; };
+		7E3B4D89242F23EF0013F98B /* CultureTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D88242F23EF0013F98B /* CultureTip.swift */; };
+		7E3B4D8B242F244C0013F98B /* LanguagePickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D8A242F244C0013F98B /* LanguagePickViewController.swift */; };
+		7E3B4D8F242F26C80013F98B /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3B4D8E242F26AC0013F98B /* Raleway-Bold.ttf */; };
+		7E3B4D90242F26CA0013F98B /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3B4D8D242F26AC0013F98B /* Raleway-Regular.ttf */; };
+		7E3B4D93242F282E0013F98B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D92242F282E0013F98B /* GradientView.swift */; };
+		7E3B4D96242F2E9E0013F98B /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3B4D95242F2E8A0013F98B /* Raleway-SemiBold.ttf */; };
+		7E3B4D98242F46EB0013F98B /* WordLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D97242F46EB0013F98B /* WordLearnViewController.swift */; };
+		7E3B4D9A242F47120013F98B /* HomeWithCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D99242F47120013F98B /* HomeWithCardsViewController.swift */; };
+		7E3B4D9C242FC05B0013F98B /* WhiteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3B4D9B242FC05B0013F98B /* WhiteCardView.swift */; };
+		7E5E1627242FDDC600DF1CE9 /* CultureWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E1626242FDDC600DF1CE9 /* CultureWord.swift */; };
+		7E5E162A242FDE1F00DF1CE9 /* NetworkingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E1629242FDE1F00DF1CE9 /* NetworkingStore.swift */; };
+		7E5E162C2430415F00DF1CE9 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E162B2430415F00DF1CE9 /* Keys.swift */; };
 		A41C4F64473C9DEFAB64211C /* Pods_LAHacks_2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4043548F506EC7C51EFABF6F /* Pods_LAHacks_2020.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +40,20 @@
 		7E26A65D242D7341009506AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E26A660242D7341009506AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E26A662242D7341009506AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E3B4D83242F22F00013F98B /* EarthIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthIntroViewController.swift; sourceTree = "<group>"; };
+		7E3B4D85242F23510013F98B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		7E3B4D88242F23EF0013F98B /* CultureTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureTip.swift; sourceTree = "<group>"; };
+		7E3B4D8A242F244C0013F98B /* LanguagePickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickViewController.swift; sourceTree = "<group>"; };
+		7E3B4D8D242F26AC0013F98B /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		7E3B4D8E242F26AC0013F98B /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		7E3B4D92242F282E0013F98B /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		7E3B4D95242F2E8A0013F98B /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		7E3B4D97242F46EB0013F98B /* WordLearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordLearnViewController.swift; sourceTree = "<group>"; };
+		7E3B4D99242F47120013F98B /* HomeWithCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWithCardsViewController.swift; sourceTree = "<group>"; };
+		7E3B4D9B242FC05B0013F98B /* WhiteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteCardView.swift; sourceTree = "<group>"; };
+		7E5E1626242FDDC600DF1CE9 /* CultureWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureWord.swift; sourceTree = "<group>"; };
+		7E5E1629242FDE1F00DF1CE9 /* NetworkingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingStore.swift; sourceTree = "<group>"; };
+		7E5E162B2430415F00DF1CE9 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		8DDE5D2CF4C8F0D6681A21ED /* Pods-LAHacks 2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAHacks 2020.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LAHacks 2020/Pods-LAHacks 2020.debug.xcconfig"; sourceTree = "<group>"; };
 		F8DA52C5EC5F307C921FB1BA /* Pods-LAHacks 2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAHacks 2020.release.xcconfig"; path = "Pods/Target Support Files/Pods-LAHacks 2020/Pods-LAHacks 2020.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,15 +99,77 @@
 		7E26A653242D733A009506AA /* LAHacks 2020 */ = {
 			isa = PBXGroup;
 			children = (
+				7E5E1628242FDDF700DF1CE9 /* Store */,
+				7E3B4D91242F28170013F98B /* View */,
+				7E3B4D8C242F269A0013F98B /* Fonts */,
+				7E3B4D87242F23E70013F98B /* Model */,
+				7E3B4D82242F22D80013F98B /* ViewControllers */,
 				7E26A654242D733A009506AA /* AppDelegate.swift */,
+				7E3B4D94242F2C840013F98B /* Segues */,
 				7E26A656242D733A009506AA /* SceneDelegate.swift */,
 				7E26A658242D733A009506AA /* ViewController.swift */,
 				7E26A65A242D733A009506AA /* Main.storyboard */,
 				7E26A65D242D7341009506AA /* Assets.xcassets */,
 				7E26A65F242D7341009506AA /* LaunchScreen.storyboard */,
 				7E26A662242D7341009506AA /* Info.plist */,
+				7E3B4D85242F23510013F98B /* UIColor+Extension.swift */,
+				7E5E162B2430415F00DF1CE9 /* Keys.swift */,
 			);
 			path = "LAHacks 2020";
+			sourceTree = "<group>";
+		};
+		7E3B4D82242F22D80013F98B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E3B4D83242F22F00013F98B /* EarthIntroViewController.swift */,
+				7E3B4D8A242F244C0013F98B /* LanguagePickViewController.swift */,
+				7E3B4D97242F46EB0013F98B /* WordLearnViewController.swift */,
+				7E3B4D99242F47120013F98B /* HomeWithCardsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7E3B4D87242F23E70013F98B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E3B4D88242F23EF0013F98B /* CultureTip.swift */,
+				7E5E1626242FDDC600DF1CE9 /* CultureWord.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7E3B4D8C242F269A0013F98B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7E3B4D8E242F26AC0013F98B /* Raleway-Bold.ttf */,
+				7E3B4D95242F2E8A0013F98B /* Raleway-SemiBold.ttf */,
+				7E3B4D8D242F26AC0013F98B /* Raleway-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7E3B4D91242F28170013F98B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E3B4D92242F282E0013F98B /* GradientView.swift */,
+				7E3B4D9B242FC05B0013F98B /* WhiteCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E3B4D94242F2C840013F98B /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Segues;
+			sourceTree = "<group>";
+		};
+		7E5E1628242FDDF700DF1CE9 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				7E5E1629242FDE1F00DF1CE9 /* NetworkingStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		D8CBBA2707C2BFA59E3473A0 /* Pods */ = {
@@ -102,6 +192,7 @@
 				7E26A64D242D733A009506AA /* Sources */,
 				7E26A64E242D733A009506AA /* Frameworks */,
 				7E26A64F242D733A009506AA /* Resources */,
+				BF0D8B9C71C89E21E3A3CCEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,8 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E26A661242D7341009506AA /* LaunchScreen.storyboard in Resources */,
+				7E3B4D90242F26CA0013F98B /* Raleway-Regular.ttf in Resources */,
 				7E26A65E242D7341009506AA /* Assets.xcassets in Resources */,
+				7E3B4D96242F2E9E0013F98B /* Raleway-SemiBold.ttf in Resources */,
 				7E26A65C242D733A009506AA /* Main.storyboard in Resources */,
+				7E3B4D8F242F26C80013F98B /* Raleway-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +271,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BF0D8B9C71C89E21E3A3CCEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LAHacks 2020/Pods-LAHacks 2020-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGoogleTranslate/SwiftGoogleTranslate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGoogleTranslate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LAHacks 2020/Pods-LAHacks 2020-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -184,9 +298,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5E1627242FDDC600DF1CE9 /* CultureWord.swift in Sources */,
+				7E5E162A242FDE1F00DF1CE9 /* NetworkingStore.swift in Sources */,
+				7E3B4D8B242F244C0013F98B /* LanguagePickViewController.swift in Sources */,
+				7E3B4D9C242FC05B0013F98B /* WhiteCardView.swift in Sources */,
+				7E3B4D84242F22F00013F98B /* EarthIntroViewController.swift in Sources */,
 				7E26A659242D733A009506AA /* ViewController.swift in Sources */,
 				7E26A655242D733A009506AA /* AppDelegate.swift in Sources */,
 				7E26A657242D733A009506AA /* SceneDelegate.swift in Sources */,
+				7E3B4D89242F23EF0013F98B /* CultureTip.swift in Sources */,
+				7E3B4D93242F282E0013F98B /* GradientView.swift in Sources */,
+				7E3B4D86242F23510013F98B /* UIColor+Extension.swift in Sources */,
+				7E5E162C2430415F00DF1CE9 /* Keys.swift in Sources */,
+				7E3B4D98242F46EB0013F98B /* WordLearnViewController.swift in Sources */,
+				7E3B4D9A242F47120013F98B /* HomeWithCardsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,15 +456,19 @@
 			baseConfigurationReference = 8DDE5D2CF4C8F0D6681A21ED /* Pods-LAHacks 2020.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2FKX4SDTGM;
 				INFOPLIST_FILE = "LAHacks 2020/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Krager.LAHacks-2020";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Test 2";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,15 +479,19 @@
 			baseConfigurationReference = F8DA52C5EC5F307C921FB1BA /* Pods-LAHacks 2020.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2FKX4SDTGM;
 				INFOPLIST_FILE = "LAHacks 2020/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Krager.LAHacks-2020";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Test 2";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

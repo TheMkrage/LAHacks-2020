@@ -1,3 +1,20 @@
-PODFILE CHECKSUM: 67fb120a5c79ffd7da50edf31b9c4d5ad3581e97
+PODS:
+  - Alamofire (4.8.2)
+  - SwiftGoogleTranslate (0.2.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - SwiftGoogleTranslate
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SwiftGoogleTranslate
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  SwiftGoogleTranslate: 96960d3548e800e15b347518afca546d2edc8519
+
+PODFILE CHECKSUM: 8cf2c9d21d740de2c51d9d907d0fc2fc5ff4a554
 
 COCOAPODS: 1.5.2

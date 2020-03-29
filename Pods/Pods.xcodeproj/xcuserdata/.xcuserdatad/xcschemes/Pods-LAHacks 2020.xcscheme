@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F26B85147ED547FFB17C71033E1E91D"
+               BlueprintIdentifier = "41BAAB2F668AAC0916049C3C6D9EA1BB"
                BlueprintName = "Pods-LAHacks 2020"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-LAHacks 2020.framework">

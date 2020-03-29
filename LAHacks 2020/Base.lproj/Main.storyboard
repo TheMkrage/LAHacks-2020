@@ -1,24 +1,674 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Bold.ttf">
+            <string>Raleway-Bold</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Earth Intro View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="EarthIntroViewController" customModule="LAHacks_2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="LAHacks_2020" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7l-bi-clR">
+                                <rect key="frame" x="120.5" y="767" width="173" height="60"/>
+                                <color key="backgroundColor" name="Jobbo Top"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Fxy-OO-nlg"/>
+                                    <constraint firstAttribute="width" constant="173" id="h2w-Zv-gUc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="28"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="q9B-DP-yfy" kind="presentation" modalPresentationStyle="fullScreen" id="pPQ-yd-j9S"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jobbo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afJ-7x-drE">
+                                <rect key="frame" x="103" y="152" width="209" height="76"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X7l-bi-clR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9FG-PT-zZe"/>
+                            <constraint firstItem="afJ-7x-drE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pvg-jo-HL7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X7l-bi-clR" secondAttribute="bottom" constant="35" id="bo2-A4-eTs"/>
+                            <constraint firstItem="afJ-7x-drE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="wpv-aI-Cvs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" name="Jobbo Top"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" name="Jobbo Bottom"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="0.69999999999999996"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Language Pick View Controller-->
+        <scene sceneID="o9f-Cl-XKx">
+            <objects>
+                <viewController id="q9B-DP-yfy" customClass="LanguagePickViewController" customModule="LAHacks_2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Tm-YY-153">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jobbo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NZ-mm-tqC">
+                                <rect key="frame" x="114.5" y="64" width="185.5" height="76"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-ng-Qx3">
+                                <rect key="frame" x="40" y="202" width="334" height="492"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZU-vG-WuC">
+                                        <rect key="frame" x="28" y="28" width="90" height="28"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="24"/>
+                                        <color key="textColor" name="Text - Normal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your Country:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piK-r1-igy">
+                                        <rect key="frame" x="28" y="52" width="146" height="28"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="24"/>
+                                        <color key="textColor" name="Text - Normal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVt-Tf-Hyh">
+                                        <rect key="frame" x="237" y="48.5" width="77" height="35"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="30"/>
+                                        <color key="textColor" name="Text - Normal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kmd-kz-Cwk">
+                                        <rect key="frame" x="47" y="131" width="240" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEi-5v-SKO" userLabel="Mexico">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="eQ9-t3-Xg4"/>
+                                                    <constraint firstAttribute="height" constant="60" id="zTv-Fq-55y"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                <state key="normal" image="mexico"/>
+                                                <connections>
+                                                    <action selector="pickMexico:" destination="q9B-DP-yfy" eventType="touchUpInside" id="8K5-HJ-b1a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfe-mI-iCl" userLabel="China">
+                                                <rect key="frame" x="90" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="haP-Hc-SdT"/>
+                                                    <constraint firstAttribute="width" constant="60" id="i15-PD-Iwl"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                <state key="normal" image="china"/>
+                                                <connections>
+                                                    <action selector="pickChina:" destination="q9B-DP-yfy" eventType="touchUpInside" id="lAL-04-tes"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkN-ry-GQi" userLabel="France">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="2lx-91-a3T"/>
+                                                    <constraint firstAttribute="width" constant="60" id="Rb9-Wb-WEt"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                <state key="normal" image="france"/>
+                                                <connections>
+                                                    <action selector="pickFrance:" destination="q9B-DP-yfy" eventType="touchUpInside" id="ZA9-e5-m9u"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qtl-Xd-nfi">
+                                        <rect key="frame" x="47" y="236" width="240" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVA-Gn-Kat" userLabel="Spain">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="PR7-5g-0XB"/>
+                                                    <constraint firstAttribute="width" constant="60" id="hU7-do-PFR"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                <state key="normal" image="spain"/>
+                                                <connections>
+                                                    <action selector="pickSpain:" destination="q9B-DP-yfy" eventType="touchUpInside" id="SID-RA-Lpm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jle-uM-cGK" userLabel="Japan">
+                                                <rect key="frame" x="90" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="9G4-J0-Uyi"/>
+                                                    <constraint firstAttribute="width" constant="60" id="XtT-J8-mbo"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                <state key="normal" image="japan"/>
+                                                <connections>
+                                                    <action selector="pickJapan:" destination="q9B-DP-yfy" eventType="touchUpInside" id="O5p-ag-fMt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H4-DR-cjl" userLabel="India">
+                                                <rect key="frame" x="180" y="0.0" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="1U9-jk-nDu"/>
+                                                    <constraint firstAttribute="height" constant="60" id="gSF-V8-I4l"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                                <state key="normal" image="india"/>
+                                                <connections>
+                                                    <action selector="pickIndia:" destination="q9B-DP-yfy" eventType="touchUpInside" id="aoc-Ql-gK2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AQ-U0-A30">
+                                        <rect key="frame" x="146" y="406" width="44" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="492" id="3fR-XZ-UyB"/>
+                                    <constraint firstItem="qtl-Xd-nfi" firstAttribute="centerX" secondItem="h2z-ng-Qx3" secondAttribute="centerX" id="Mc7-gf-dqw"/>
+                                    <constraint firstAttribute="trailing" secondItem="HVt-Tf-Hyh" secondAttribute="trailing" constant="20" id="Y69-CO-5zQ"/>
+                                    <constraint firstItem="GZU-vG-WuC" firstAttribute="leading" secondItem="h2z-ng-Qx3" secondAttribute="leading" constant="28" id="bUq-5m-XdU"/>
+                                    <constraint firstItem="HVt-Tf-Hyh" firstAttribute="centerY" secondItem="piK-r1-igy" secondAttribute="centerY" id="erm-lI-GZM"/>
+                                    <constraint firstItem="piK-r1-igy" firstAttribute="top" secondItem="GZU-vG-WuC" secondAttribute="bottom" constant="-4" id="j2t-oc-Oad"/>
+                                    <constraint firstItem="piK-r1-igy" firstAttribute="leading" secondItem="GZU-vG-WuC" secondAttribute="leading" id="mHs-02-fnc"/>
+                                    <constraint firstItem="GZU-vG-WuC" firstAttribute="top" secondItem="h2z-ng-Qx3" secondAttribute="top" constant="28" id="pTP-wc-tcG"/>
+                                    <constraint firstItem="qtl-Xd-nfi" firstAttribute="top" secondItem="kmd-kz-Cwk" secondAttribute="bottom" constant="45" id="wDa-7g-KZx"/>
+                                    <constraint firstItem="kmd-kz-Cwk" firstAttribute="centerX" secondItem="h2z-ng-Qx3" secondAttribute="centerX" id="wZS-hF-eX3"/>
+                                    <constraint firstItem="kmd-kz-Cwk" firstAttribute="top" secondItem="HVt-Tf-Hyh" secondAttribute="bottom" constant="47.5" id="yhC-Kh-wZu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="Jobbo Flag Corner"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teo-Cd-aQE">
+                                <rect key="frame" x="120.5" y="767" width="173" height="60"/>
+                                <color key="backgroundColor" name="Jobbo Top"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="Nhk-3q-h3W"/>
+                                    <constraint firstAttribute="height" constant="60" id="r1g-jb-1wW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="28"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="HN2-X8-mi3" kind="presentation" modalPresentationStyle="fullScreen" id="RUl-8C-eS0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="LanguagePick Background"/>
+                        <constraints>
+                            <constraint firstItem="3NZ-mm-tqC" firstAttribute="top" secondItem="gyo-TY-zkc" secondAttribute="top" constant="20" id="2pV-VR-kLK"/>
+                            <constraint firstItem="teo-Cd-aQE" firstAttribute="centerX" secondItem="2Tm-YY-153" secondAttribute="centerX" id="6gR-UW-QKN"/>
+                            <constraint firstItem="gyo-TY-zkc" firstAttribute="trailing" secondItem="h2z-ng-Qx3" secondAttribute="trailing" constant="40" id="7Zf-ht-1qT"/>
+                            <constraint firstItem="gyo-TY-zkc" firstAttribute="bottom" secondItem="teo-Cd-aQE" secondAttribute="bottom" constant="35" id="Dj4-s0-7ZD"/>
+                            <constraint firstItem="h2z-ng-Qx3" firstAttribute="centerY" secondItem="2Tm-YY-153" secondAttribute="centerY" id="FxL-HU-3tu"/>
+                            <constraint firstItem="h2z-ng-Qx3" firstAttribute="leading" secondItem="gyo-TY-zkc" secondAttribute="leading" constant="40" id="PtV-jP-lSq"/>
+                            <constraint firstItem="3NZ-mm-tqC" firstAttribute="centerX" secondItem="2Tm-YY-153" secondAttribute="centerX" id="x09-ma-J58"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gyo-TY-zkc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qkx-T3-GVL"/>
+                    <connections>
+                        <outlet property="countryLabel" destination="HVt-Tf-Hyh" id="9xK-bY-Ksd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLO-pG-Bnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="114.50892857142857"/>
+        </scene>
+        <!--Jobbo-->
+        <scene sceneID="bSW-jC-SOH">
+            <objects>
+                <viewController id="xfg-V6-WLE" customClass="HomeWithCardsViewController" customModule="LAHacks_2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lrX-HS-RGv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oU6-re-VXR">
+                                <rect key="frame" x="20" y="40" width="374" height="615.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTo-Mc-ZBQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="145"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmj-Dx-hId">
+                                                <rect key="frame" x="20" y="20" width="145" height="33"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-Fw-lr4">
+                                                <rect key="frame" x="20" y="53" width="172" height="70"/>
+                                                <string key="text">some text some 
+textsome textsome
+text some text </string>
+                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="LanguagePick Background"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XoV-Fw-lr4" secondAttribute="bottom" constant="20" id="Pv6-1l-69C"/>
+                                            <constraint firstAttribute="height" constant="145" id="kEF-2H-Ljd"/>
+                                            <constraint firstItem="Xmj-Dx-hId" firstAttribute="leading" secondItem="pTo-Mc-ZBQ" secondAttribute="leading" constant="20" id="pH3-7o-cUT"/>
+                                            <constraint firstItem="Xmj-Dx-hId" firstAttribute="top" secondItem="pTo-Mc-ZBQ" secondAttribute="top" constant="20" id="t28-bj-e9G"/>
+                                            <constraint firstItem="XoV-Fw-lr4" firstAttribute="top" secondItem="Xmj-Dx-hId" secondAttribute="bottom" id="u8q-eF-2n4"/>
+                                            <constraint firstItem="XoV-Fw-lr4" firstAttribute="leading" secondItem="Xmj-Dx-hId" secondAttribute="leading" id="w00-nH-okf"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="5oT-cy-XBy" appends="YES" id="XSw-aF-0XO"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szD-gx-qn9">
+                                        <rect key="frame" x="0.0" y="235.5" width="374" height="145"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interview Trainer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-Mt-62N">
+                                                <rect key="frame" x="20" y="20" width="204.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcN-rn-rpB">
+                                                <rect key="frame" x="20" y="53" width="172" height="70"/>
+                                                <string key="text">some text some 
+textsome textsome
+text some text </string>
+                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="LanguagePick Background"/>
+                                        <constraints>
+                                            <constraint firstItem="jcN-rn-rpB" firstAttribute="leading" secondItem="QQV-Mt-62N" secondAttribute="leading" id="7pR-a6-FNp"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jcN-rn-rpB" secondAttribute="bottom" constant="20" id="Za3-F1-O5M"/>
+                                            <constraint firstAttribute="height" constant="145" id="c4b-DP-UwX"/>
+                                            <constraint firstItem="jcN-rn-rpB" firstAttribute="top" secondItem="QQV-Mt-62N" secondAttribute="bottom" id="cSQ-H7-LIt"/>
+                                            <constraint firstItem="QQV-Mt-62N" firstAttribute="leading" secondItem="szD-gx-qn9" secondAttribute="leading" constant="20" id="jWx-sL-D48"/>
+                                            <constraint firstItem="QQV-Mt-62N" firstAttribute="top" secondItem="szD-gx-qn9" secondAttribute="top" constant="20" id="mBF-Or-uGd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6K-c4-8zx">
+                                        <rect key="frame" x="0.0" y="470.5" width="374" height="145"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Culture Helper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Et-fg-YAu">
+                                                <rect key="frame" x="20" y="20" width="180.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5B-og-oH2">
+                                                <rect key="frame" x="20" y="53" width="172" height="70"/>
+                                                <string key="text">some text some 
+textsome textsome
+text some text </string>
+                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="LanguagePick Background"/>
+                                        <constraints>
+                                            <constraint firstItem="e5B-og-oH2" firstAttribute="leading" secondItem="7Et-fg-YAu" secondAttribute="leading" id="3il-xK-vPD"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="e5B-og-oH2" secondAttribute="bottom" constant="20" id="BiS-pf-8wc"/>
+                                            <constraint firstItem="7Et-fg-YAu" firstAttribute="leading" secondItem="J6K-c4-8zx" secondAttribute="leading" constant="20" id="QJR-Fe-m9T"/>
+                                            <constraint firstAttribute="height" constant="145" id="Xxo-GD-UKP"/>
+                                            <constraint firstItem="e5B-og-oH2" firstAttribute="top" secondItem="7Et-fg-YAu" secondAttribute="bottom" id="apq-yO-Yru"/>
+                                            <constraint firstItem="7Et-fg-YAu" firstAttribute="top" secondItem="J6K-c4-8zx" secondAttribute="top" constant="20" id="uJV-B0-cbj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKl-Bk-e5L">
+                                <rect key="frame" x="102" y="688.5" width="210.5" height="65.5"/>
+                                <string key="text">Select a modual 
+and get started!</string>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="28"/>
+                                <color key="textColor" name="Text - Normal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IKl-Bk-e5L" firstAttribute="centerX" secondItem="lrX-HS-RGv" secondAttribute="centerX" id="EMr-QA-Hme"/>
+                            <constraint firstItem="oU6-re-VXR" firstAttribute="leading" secondItem="xK6-ha-AUf" secondAttribute="leading" constant="20" id="c1t-E1-Upn"/>
+                            <constraint firstItem="IKl-Bk-e5L" firstAttribute="bottom" secondItem="xK6-ha-AUf" secondAttribute="bottom" constant="-20" id="hEW-AR-e6Y"/>
+                            <constraint firstItem="oU6-re-VXR" firstAttribute="top" secondItem="xK6-ha-AUf" secondAttribute="top" constant="40" id="m57-KY-dqV"/>
+                            <constraint firstItem="IKl-Bk-e5L" firstAttribute="top" secondItem="oU6-re-VXR" secondAttribute="bottom" constant="33" id="oz5-oK-zNI"/>
+                            <constraint firstItem="xK6-ha-AUf" firstAttribute="trailing" secondItem="oU6-re-VXR" secondAttribute="trailing" constant="20" id="r3w-07-3ic"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xK6-ha-AUf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Jobbo" largeTitleDisplayMode="always" id="RQV-Tj-zTL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEG-LH-CK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5oT-cy-XBy">
+                    <connections>
+                        <action selector="tapLearnWords:" destination="xfg-V6-WLE" id="sxX-Co-X46"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3204.347826086957" y="114.50892857142857"/>
+        </scene>
+        <!--Word Learn View Controller-->
+        <scene sceneID="7de-6a-T7f">
+            <objects>
+                <viewController storyboardIdentifier="WordLearn" id="Dvt-MX-dSe" customClass="WordLearnViewController" customModule="LAHacks_2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3BW-tR-lMH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEx-63-h9g">
+                                <rect key="frame" x="103.5" y="68" width="207" height="47"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfZ-CF-PS4" userLabel="Definitions" customClass="WhiteCardView" customModule="LAHacks_2020" customModuleProvider="target">
+                                <rect key="frame" x="40" y="139" width="334" height="312"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collaborate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdb-ml-Mcc">
+                                        <rect key="frame" x="72.5" y="20" width="189.5" height="45"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="38"/>
+                                        <color key="textColor" name="Text - Normal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8D-eX-8fu">
+                                        <rect key="frame" x="20" y="81" width="294" height="70"/>
+                                        <string key="text">work jointly on an activity, 
+especially to produce or 
+create something.</string>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="20"/>
+                                        <color key="textColor" name="Text - Normal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collaborar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1F-ni-MlR">
+                                        <rect key="frame" x="100" y="178" width="134" height="35"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="30"/>
+                                        <color key="textColor" name="Light Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kb-oR-FH7">
+                                        <rect key="frame" x="20" y="229" width="294" height="63"/>
+                                        <string key="text">work jointly on an activity, 
+especially to produce or 
+create something.</string>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="18"/>
+                                        <color key="textColor" name="Light Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3kb-oR-FH7" firstAttribute="leading" secondItem="cfZ-CF-PS4" secondAttribute="leading" constant="20" id="1S9-Bn-YNK"/>
+                                    <constraint firstItem="3kb-oR-FH7" firstAttribute="top" secondItem="l1F-ni-MlR" secondAttribute="bottom" constant="16" id="50h-31-G5c"/>
+                                    <constraint firstAttribute="bottom" secondItem="3kb-oR-FH7" secondAttribute="bottom" constant="20" id="Ar6-co-gX2"/>
+                                    <constraint firstAttribute="trailing" secondItem="3kb-oR-FH7" secondAttribute="trailing" constant="20" id="LxR-dU-C49"/>
+                                    <constraint firstAttribute="trailing" secondItem="j8D-eX-8fu" secondAttribute="trailing" constant="20" id="OFt-Ei-e7l"/>
+                                    <constraint firstItem="j8D-eX-8fu" firstAttribute="leading" secondItem="cfZ-CF-PS4" secondAttribute="leading" constant="20" id="XBn-JV-gc8"/>
+                                    <constraint firstItem="l1F-ni-MlR" firstAttribute="top" secondItem="j8D-eX-8fu" secondAttribute="bottom" constant="27" id="XKm-ez-NSH"/>
+                                    <constraint firstItem="vdb-ml-Mcc" firstAttribute="centerX" secondItem="cfZ-CF-PS4" secondAttribute="centerX" id="ZLm-Tb-zao"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="aF8-4b-haP"/>
+                                    <constraint firstItem="l1F-ni-MlR" firstAttribute="centerX" secondItem="cfZ-CF-PS4" secondAttribute="centerX" id="giE-sm-uMw"/>
+                                    <constraint firstItem="vdb-ml-Mcc" firstAttribute="top" secondItem="cfZ-CF-PS4" secondAttribute="top" constant="20" id="rTw-IB-fwY"/>
+                                    <constraint firstItem="j8D-eX-8fu" firstAttribute="top" secondItem="vdb-ml-Mcc" secondAttribute="bottom" constant="16" id="taA-jC-V0G"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the microphone to test your pronunciation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-dI-g7a">
+                                <rect key="frame" x="45.5" y="481" width="323" height="18"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utw-jm-U8j">
+                                <rect key="frame" x="162" y="505" width="90" height="90"/>
+                                <color key="backgroundColor" name="LanguagePick Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="QA9-NN-Kss"/>
+                                    <constraint firstAttribute="height" constant="90" id="fbu-Zf-gWd"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                <state key="normal" image="microphone"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordButton:" destination="Dvt-MX-dSe" eventType="touchUpInside" id="gZf-LR-vF2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHA-fL-Zfz">
+                                <rect key="frame" x="67" y="782" width="280" height="60"/>
+                                <color key="backgroundColor" name="LanguagePick Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="7R7-NJ-vcR"/>
+                                    <constraint firstAttribute="height" constant="60" id="Bpr-zG-evx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="28"/>
+                                <state key="normal" title="Skip Word"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextWordButton:" destination="Dvt-MX-dSe" eventType="touchUpInside" id="Z31-bz-xGv"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aac-It-re1" userLabel="Gif" customClass="WhiteCardView" customModule="LAHacks_2020" customModuleProvider="target">
+                                <rect key="frame" x="40" y="139" width="334" height="327"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collaborate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6h-bn-GEi">
+                                        <rect key="frame" x="72.5" y="20" width="189.5" height="45"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="38"/>
+                                        <color key="textColor" name="Text - Normal"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collaborar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXT-2r-coO">
+                                        <rect key="frame" x="100" y="71" width="134" height="35"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="30"/>
+                                        <color key="textColor" name="Light Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-tW-gU4">
+                                        <rect key="frame" x="20" y="126" width="294" height="181"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dpd-tW-gU4" secondAttribute="trailing" constant="20" id="9qO-rf-59a"/>
+                                    <constraint firstItem="dpd-tW-gU4" firstAttribute="top" secondItem="eXT-2r-coO" secondAttribute="bottom" constant="20" id="GRa-1v-0yT"/>
+                                    <constraint firstItem="eXT-2r-coO" firstAttribute="top" secondItem="J6h-bn-GEi" secondAttribute="bottom" constant="6" id="UPJ-hs-MGj"/>
+                                    <constraint firstItem="J6h-bn-GEi" firstAttribute="centerX" secondItem="Aac-It-re1" secondAttribute="centerX" id="cO6-wI-T1E"/>
+                                    <constraint firstItem="eXT-2r-coO" firstAttribute="centerX" secondItem="Aac-It-re1" secondAttribute="centerX" id="dLf-X5-XFU"/>
+                                    <constraint firstItem="dpd-tW-gU4" firstAttribute="leading" secondItem="Aac-It-re1" secondAttribute="leading" constant="20" id="pUK-vs-OMN"/>
+                                    <constraint firstItem="J6h-bn-GEi" firstAttribute="top" secondItem="Aac-It-re1" secondAttribute="top" constant="20" id="tJZ-70-2km"/>
+                                    <constraint firstItem="dpd-tW-gU4" firstAttribute="centerX" secondItem="Aac-It-re1" secondAttribute="centerX" id="wlH-V4-XL1"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="zDM-Yx-Thw"/>
+                                    <constraint firstAttribute="bottom" secondItem="dpd-tW-gU4" secondAttribute="bottom" constant="20" id="zoQ-u7-H0B"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5U-cb-qTd">
+                                <rect key="frame" x="174" y="744" width="66.5" height="18"/>
+                                <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="15"/>
+                                <color key="textColor" name="Text - Normal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eHA-fL-Zfz" firstAttribute="centerX" secondItem="3BW-tR-lMH" secondAttribute="centerX" id="1Hy-lc-Eid"/>
+                            <constraint firstItem="utw-jm-U8j" firstAttribute="top" secondItem="sg3-dI-g7a" secondAttribute="bottom" constant="6" id="30m-jG-7tT"/>
+                            <constraint firstItem="utw-jm-U8j" firstAttribute="centerX" secondItem="3BW-tR-lMH" secondAttribute="centerX" id="35V-x3-ZgQ"/>
+                            <constraint firstItem="sg3-dI-g7a" firstAttribute="centerX" secondItem="3BW-tR-lMH" secondAttribute="centerX" id="6PN-vw-dBZ"/>
+                            <constraint firstItem="Aac-It-re1" firstAttribute="leading" secondItem="tIN-zi-LHq" secondAttribute="leading" constant="40" id="9md-WW-mM6"/>
+                            <constraint firstItem="H5U-cb-qTd" firstAttribute="centerX" secondItem="3BW-tR-lMH" secondAttribute="centerX" id="SiV-5H-f3K"/>
+                            <constraint firstItem="tIN-zi-LHq" firstAttribute="trailing" secondItem="Aac-It-re1" secondAttribute="trailing" constant="40" id="V3C-Jc-1dM"/>
+                            <constraint firstItem="tIN-zi-LHq" firstAttribute="trailing" secondItem="cfZ-CF-PS4" secondAttribute="trailing" constant="40" id="Z8W-zJ-mjq"/>
+                            <constraint firstItem="sg3-dI-g7a" firstAttribute="top" secondItem="cfZ-CF-PS4" secondAttribute="bottom" constant="30" id="huj-Ra-TEO"/>
+                            <constraint firstItem="HEx-63-h9g" firstAttribute="top" secondItem="tIN-zi-LHq" secondAttribute="top" constant="24" id="j8r-vL-1uA"/>
+                            <constraint firstItem="eHA-fL-Zfz" firstAttribute="top" secondItem="H5U-cb-qTd" secondAttribute="bottom" constant="20" id="klD-bq-d0w"/>
+                            <constraint firstItem="sg3-dI-g7a" firstAttribute="top" secondItem="Aac-It-re1" secondAttribute="bottom" constant="15" id="rKN-Xf-rPi"/>
+                            <constraint firstItem="tIN-zi-LHq" firstAttribute="bottom" secondItem="eHA-fL-Zfz" secondAttribute="bottom" constant="20" id="sPq-25-vPz"/>
+                            <constraint firstItem="HEx-63-h9g" firstAttribute="centerX" secondItem="3BW-tR-lMH" secondAttribute="centerX" id="us7-fb-BMQ"/>
+                            <constraint firstItem="cfZ-CF-PS4" firstAttribute="top" secondItem="HEx-63-h9g" secondAttribute="bottom" constant="24" id="uuL-Dr-veU"/>
+                            <constraint firstItem="cfZ-CF-PS4" firstAttribute="leading" secondItem="tIN-zi-LHq" secondAttribute="leading" constant="40" id="wjp-pB-P7j"/>
+                            <constraint firstItem="Aac-It-re1" firstAttribute="top" secondItem="HEx-63-h9g" secondAttribute="bottom" constant="24" id="xI6-Af-8qA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tIN-zi-LHq"/>
+                    </view>
+                    <connections>
+                        <outlet property="definitionEnglishLabel" destination="j8D-eX-8fu" id="xdc-WH-KE7"/>
+                        <outlet property="definitionSpanishLabel" destination="3kb-oR-FH7" id="yMU-wl-doY"/>
+                        <outlet property="definitionWrapperView" destination="cfZ-CF-PS4" id="r5v-x0-FLB"/>
+                        <outlet property="feedbackLabel" destination="H5U-cb-qTd" id="c6C-oj-eXv"/>
+                        <outlet property="gifView" destination="dpd-tW-gU4" id="nVZ-As-cGT"/>
+                        <outlet property="gifWrapperView" destination="Aac-It-re1" id="Zb1-rE-TaU"/>
+                        <outlet property="wordEnglishLabel" destination="J6h-bn-GEi" id="KaS-Xk-ygH"/>
+                        <outlet property="wordEnglishLabel2" destination="vdb-ml-Mcc" id="eoK-jx-fX2"/>
+                        <outlet property="wordSpanishLabel" destination="eXT-2r-coO" id="fr1-iR-AVT"/>
+                        <outlet property="wordSpanishLabel2" destination="l1F-ni-MlR" id="f0d-pj-RdB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHy-Vn-XOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4195.652173913044" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EMz-8P-jOZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HN2-X8-mi3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="lTe-07-yPl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="LanguagePick Background"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="26"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xfg-V6-WLE" kind="relationship" relationship="rootViewController" id="Cdc-JU-EBE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZr-ao-0Fj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2292.753623188406" y="114.50892857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="china" width="512" height="512"/>
+        <image name="france" width="512" height="512"/>
+        <image name="india" width="512" height="512"/>
+        <image name="japan" width="512" height="512"/>
+        <image name="mexico" width="250" height="250"/>
+        <image name="microphone" width="512" height="512"/>
+        <image name="spain" width="512" height="512"/>
+        <namedColor name="Jobbo Bottom">
+            <color red="0.52156862745098043" green="0.30196078431372547" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Jobbo Flag Corner">
+            <color red="0.67843137254901964" green="0.54509803921568623" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Jobbo Top">
+            <color red="0.17254901960784313" green="0.10196078431372549" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LanguagePick Background">
+            <color red="0.52156862745098043" green="0.30196078431372547" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Light Text">
+            <color red="0.61960784313725492" green="0.75686274509803919" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text - Normal">
+            <color red="0.37647058823529411" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
